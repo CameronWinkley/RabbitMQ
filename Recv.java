@@ -19,7 +19,7 @@ public class Recv {
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Recieved '" + message + "'");
+            System.out.println(" [x] Received '" + message + "'");
 
         };
         channel.basicConsume(Queue_Name, true, deliverCallback, consumerTag -> { });
